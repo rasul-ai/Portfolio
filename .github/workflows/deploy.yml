@@ -20,9 +20,9 @@ jobs:
       run: npm run build
 
     - name: Deploy to Netlify
-      uses: netlify/actions/cli@v4.0.0
+      uses: netlify/actions/cli@master
       with:
-        command: deploy --prod
+        args: deploy --prod
       env:
-        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        CHAT_ID: ${{ secrets.CHAT_ID }}
+        NETLIFY_AUTH_TOKEN: ${{ secrets.BOT_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.CHAT_ID }}
