@@ -70,6 +70,59 @@
     </script>
 
     <header class="header">
+      <div class="menu-btn-container">
+        <div class="container">
+          <button type="button" class="menu-btn">menu</button>
+        </div>
+      </div>
+
+      <nav class="nav hidden">
+        <ol class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#work">My Work</a></li>
+          <li class="nav-item"><a href="#blog">See Blog</a></li>
+          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item">
+            <a href="#contact" data-focused="last-focused">Contact</a>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="container header-container">
+        <div class="header-textbox">
+          <h1 class="h1">
+            <span>Hi, I'm Rasul Islam Bapary</span>
+          </h1>
+          <h3 class="h3">
+            <span>Machine Learning Engineer</span>
+          </h3>
+          <p class="header-text">
+            A computer vision expert who builds models on Object Detection, Face Recognition, 
+            Image Segmentation, Pose Estimation, Optical Character Recognition,
+            Medical Image Analysis, Drone Surveillance, and Generated AI tasks for 
+            software integration.
+          </p>
+
+          <div class="header-btns">
+            <a href="#contact" class="btn btn-cta">Hire me</a>
+            <a href="#work" class="btn btn-secondary">See my work</a>
+          </div>
+        </div>
+
+        <!-- Add your image here -->
+        <div class="header-imagebox">
+          <img 
+            src="assets/images/Rasul.jpg" 
+            alt="Rasul Islam Bapary" 
+            class="header-image"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </header>
+
+
+    <header class="header">
 
       <div class="menu-btn-container">
         <div class="container">
@@ -94,8 +147,10 @@
           <!-- Replace with your name and job title -->
           <h1 class="h1">
             <span>Hi, I'm Rasul Islam Bapary</span>
-            <span>Machine Learning Engineer</span>
           </h1>
+          <h3 class="h3">
+            <span>Machine Learning Engineer</span>
+          </h3>
 
           <!-- Add a small introductory paragraph about yourself -->
           <p class="header-text">
@@ -232,48 +287,34 @@
         </div>
       </section>
 
+
       <section class="contact">
         <div class="container">
           <h2 class="h2" id="contact">Send Message</h2>
           <div class="contact-content">
             <div class="contact-textbox">
-              <!-- Please comment this component if you're not available for hire -->
-              <strong href="#" class="hire-alert">
-                <span class="indicator"></span>
-                Available for hire
-              </strong>
               <p class="contact-text">
-                As a computer vision engineer, I specialize in building AI models with
-                 a passion for optimizing performance and ensuring accessibility. I enjoy
-                  developing solutions from the ground up, leveraging advanced algorithms and 
-                  techniques to bring innovative ideas to life and solve real-world challenges.
+                As a computer vision expert, I specialize in building AI models
+                with a passion for optimizing performance and ensuring accessibility.
               </p>
               <p class="contact-text">
-                I'm also an open-source engineer, and in my spare time, I do
-                freelance.
+                I'm also an open-source engineer and in my spare time, I do freelancing.
               </p>
-              <!-- Replace src with your signatures and name -->
               <img
-                src="assets/images/signatures.png"
-                alt="Rasul"
+                src="assets/images/signature.jpg"
+                alt="Your Signature"
                 class="signatures"
                 loading="lazy"
               />
             </div>
-            <form action="#" class="contact-form" netlify>
+            <form id="contactForm" class="contact-form" onsubmit="sendToTelegram(event)">
               <div class="form-field">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" required />
               </div>
               <div class="form-field">
                 <label for="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                  inputmode="email"
-                />
+                <input type="email" name="email" id="email" required />
               </div>
               <div class="form-field">
                 <label for="message">How can I help you?</label>
@@ -284,6 +325,7 @@
           </div>
         </div>
       </section>
+      
     </main>
 
     <footer class="footer">

@@ -112,3 +112,44 @@ logosWrappers.forEach(async (logoWrapper, i) => {
 });
 
 yearEl.textContent = new Date().getFullYear();
+
+
+
+const BOT_TOKEN = "8013121959:AAEYEidyRi5rn1PFDyAA8WkPswaAB1Hibe8"; // Replace with your bot's token
+const CHAT_ID = "382477340"; // Replace with your chat ID
+
+async function sendToTelegram(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const text = `
+    New Contact Message:
+    Name: ${name}
+    Email: ${email}
+    Message: ${message}
+  `;
+
+  const telegramURL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+  try {
+    await fetch(telegramURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: text,
+      }),
+    });
+
+    alert("Message sent successfully!");
+  } catch (error) {
+    alert("Failed to send message. Please try again later.");
+    console.error("Error sending message:", error);
+  }
+}
+

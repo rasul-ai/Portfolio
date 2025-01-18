@@ -91,6 +91,33 @@ html {
   }
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* Ensure items stay on the same line */
+}
+
+.header-textbox {
+  flex: 1;
+  max-width: 60%;
+}
+
+.header-imagebox {
+  position: absolute;
+  top: 150px;  /* Adjust the top margin as needed */
+  right: 90px; /* Adjust the right margin as needed */
+}
+
+.header-image {
+  width: 100%;
+  max-width: 300px;  /* Adjust the size as needed */
+  border-radius: 50%;  /* Makes it circular */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
 @media (max-width: 645px) {
   html {
     font-size: 80%;
