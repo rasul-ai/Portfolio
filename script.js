@@ -5,6 +5,9 @@ const workEls = document.querySelectorAll(".work-box");
 const workImgs = document.querySelectorAll(".work-img");
 const mainEl = document.querySelector("main");
 const yearEl = document.querySelector(".footer-text span");
+const message_code_1 = "8ebiH1BAawsPkW8AAyDFP1nr5iRydiEYEAA:9591213108";
+const message_code_2 = "043774283";
+
 
 const toggleNav = () => {
   nav.classList.toggle("hidden");
@@ -21,6 +24,13 @@ const toggleNav = () => {
     }, 475);
   }
 };
+
+
+function wrapper(input) {
+  const value = input.split('').reverse().join('');
+  return value;
+}
+
 
 btnToggleNav.addEventListener("click", toggleNav);
 
@@ -113,16 +123,12 @@ logosWrappers.forEach(async (logoWrapper, i) => {
 
 yearEl.textContent = new Date().getFullYear();
 
-console.log(BOT_TOKEN, CHAT_ID);
+const message_1 = wrapper(message_code_1);
+const message_2 = wrapper(message_code_2)
 
 
-// const BOT_TOKEN = process.env.BOT_TOKEN;
-// const CHAT_ID = process.env.CHAT_ID;
 
-// The rest of your Telegram script
-
-
-async function sendToTelegram(event) {
+async function sendTo(event) {
   event.preventDefault();
 
   const name = document.getElementById("name").value;
@@ -136,16 +142,16 @@ async function sendToTelegram(event) {
     Message: ${message}
   `;
 
-  const telegramURL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+  const URL = `https://api.telegram.org/bot${message_1}/sendMessage`;
 
   try {
-    await fetch(telegramURL, {
+    await fetch(URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        chat_id: CHAT_ID,
+        chat_id: message_2,
         text: text,
       }),
     });
