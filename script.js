@@ -113,10 +113,11 @@ logosWrappers.forEach(async (logoWrapper, i) => {
 
 yearEl.textContent = new Date().getFullYear();
 
+console.log(BOT_TOKEN, CHAT_ID);
 
 
-const BOT_TOKEN = process.env.BOT_TOKEN;
-const CHAT_ID = process.env.CHAT_ID;
+// const BOT_TOKEN = process.env.BOT_TOKEN;
+// const CHAT_ID = process.env.CHAT_ID;
 
 // The rest of your Telegram script
 
