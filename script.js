@@ -115,8 +115,11 @@ yearEl.textContent = new Date().getFullYear();
 
 
 
-const BOT_TOKEN = "8013121959:AAEYEidyRi5rn1PFDyAA8WkPswaAB1Hibe8"; // Replace with your bot's token
-const CHAT_ID = "382477340"; // Replace with your chat ID
+const BOT_TOKEN = process.env.BOT_TOKEN;
+const CHAT_ID = process.env.CHAT_ID;
+
+// The rest of your Telegram script
+
 
 async function sendToTelegram(event) {
   event.preventDefault();
