@@ -1,6 +1,6 @@
 const nav = document.querySelector(".nav");
 const navMenu = document.querySelector(".nav-items");
-const btnToggleNav = document.querySelector(".menu-btn");
+const btnToggleNav = document.querySelectorAll(".menu-btn");
 const workEls = document.querySelectorAll(".work-box");
 const workImgs = document.querySelectorAll(".work-img");
 const mainEl = document.querySelector("main");
@@ -15,12 +15,20 @@ const toggleNav = () => {
   // Prevent screen from scrolling when menu is opened
   document.body.classList.toggle("lock-screen");
 
-  if (nav.classList.contains("hidden")) {
-    btnToggleNav.textContent = "menu";
+  const isHidden = nav.classList.contains("hidden");
+  btnToggleNav.forEach((btn) => {
+    btn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+  });
+
+  if (isHidden) {
+    btnToggleNav.forEach((btn) => {
+      btn.textContent = "menu";
+    });
   } else {
-    // When menu is opened after transition change text respectively
     setTimeout(() => {
-      btnToggleNav.textContent = "close";
+      btnToggleNav.forEach((btn) => {
+        btn.textContent = "close";
+      });
     }, 475);
   }
 };
@@ -32,10 +40,11 @@ function wrapper(input) {
 }
 
 
-btnToggleNav.addEventListener("click", toggleNav);
+btnToggleNav.forEach((btn) => btn.addEventListener("click", toggleNav));
 
 navMenu.addEventListener("click", (e) => {
-  if (e.target.localName === "a") {
+  const link = e.target.closest("a");
+  if (link && nav.contains(link)) {
     toggleNav();
   }
 });
@@ -97,7 +106,7 @@ const lastFocusedEl = document.querySelector('a[data-focused="last-focused"]');
 document.body.addEventListener("keydown", (e) => {
   if (e.key === "Tab" && document.activeElement === lastFocusedEl) {
     e.preventDefault();
-    btnToggleNav.focus();
+    btnToggleNav[0].focus();
   }
 });
 

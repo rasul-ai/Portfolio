@@ -10,7 +10,7 @@
 
     <meta
       name="description"
-      content="Welcome to my portfolio website. I am a Machine Learning Engineer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations."
+      content="Md. Rasul Islam Bapary — Artificial Intelligence Engineer. Portfolio: experience at Softworks and BMLI, computer vision, LLM agents, medical imaging, and research. Dhaka, Bangladesh."
     />
 
     <!-- Google / Search Engine Tags -->
@@ -57,7 +57,6 @@
 
     <link rel="stylesheet" href="style.css"  />
     <script src="script.js" defer></script>
-    <script src="script.js" defer></script>
 
     <!-- Your name here -->
     <title>Rasul's Portfolio</title>
@@ -70,19 +69,49 @@
       document.body.classList.add(theme);
     </script>
 
-    <header class="header">
+    <header class="header" id="top">
       <div class="menu-btn-container">
         <div class="container">
-          <button type="button" class="menu-btn">menu</button>
+          <button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-nav">menu</button>
         </div>
       </div>
 
-      <nav class="nav hidden">
+      <nav class="nav hidden" id="site-nav" aria-label="Primary">
         <ol class="nav-items">
-          <li class="nav-item"><a href="#">Home</a></li>
-          <li class="nav-item"><a href="#work">My Work</a></li>
-          <li class="nav-item"><a href="#blog">See Blog</a></li>
-          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item"><a href="#top">Home</a></li>
+          <li class="nav-item nav-group">
+            <span class="nav-group-label">Experience</span>
+            <ol class="nav-sublist">
+              <li><a href="#exp-softworks">Softworks Limited</a></li>
+              <li><a href="#exp-bmli">Bangladesh ML Institute</a></li>
+              <li><a href="#exp-nbsoft">NBSoft</a></li>
+            </ol>
+          </li>
+          <li class="nav-item nav-group">
+            <span class="nav-group-label">Projects</span>
+            <ol class="nav-sublist">
+              <li><a href="#work">Overview</a></li>
+              <li><a href="#work-softworks">Softworks (live)</a></li>
+              <li><a href="#work-agents">Agents &amp; LLMs</a></li>
+              <li><a href="#work-vision">Computer vision</a></li>
+              <li><a href="#work-medical">Medical imaging</a></li>
+              <li><a href="#work-research">Research &amp; NLP</a></li>
+            </ol>
+          </li>
+          <li class="nav-item nav-group">
+            <span class="nav-group-label">Skills</span>
+            <ol class="nav-sublist">
+              <li><a href="#skills">Professional skills</a></li>
+              <li><a href="#toolkit">Toolkit</a></li>
+            </ol>
+          </li>
+          <li class="nav-item nav-group">
+            <span class="nav-group-label">Education</span>
+            <ol class="nav-sublist">
+              <li><a href="#education">Degree</a></li>
+              <li><a href="#publication">Publication</a></li>
+            </ol>
+          </li>
           <li class="nav-item">
             <a href="#contact" data-focused="last-focused">Contact</a>
           </li>
@@ -95,7 +124,7 @@
             <span>Hi, I'm Rasul Islam Bapary</span>
           </h1>
           <h3 class="h3">
-            <span>Machine Learning Engineer</span>
+            <span>Artificial Intelligence Engineer</span>
           </h3>
           <p class="header-text">
             Generative AI specialist and Computer Vision expert who builds models on LLM's 
@@ -123,28 +152,47 @@
       </div>
     </header>
 
-
-    <header class="header">
-
-      <div class="menu-btn-container">
-        <div class="container">
-          <button type="button"  class="menu-btn">menu</button>
-        </div>
-      </div>
-
-      <nav class="nav hidden">
-        <ol class="nav-items">
-          <li class="nav-item"><a href="#">Home</a></li>
-          <li class="nav-item"><a href="#work">My Work</a></li>
-          <li class="nav-item"><a href="#blog">See Blog</a></li>
-          <li class="nav-item"><a href="#skills">My Skills</a></li>
-          <li class="nav-item">
-            <a href="#contact" data-focused="last-focused">Contact</a>
-          </li>
-        </ol>
-      </nav>
-
     <main>
+
+      <section class="experience" id="experience" aria-labelledby="experience-heading">
+        <div class="container">
+          <h2 class="h2" id="experience-heading">Experience</h2>
+
+          <article class="experience-card" id="exp-softworks">
+            <h3 class="h3 experience-title">Softworks Limited, Dhaka — AI Engineer</h3>
+            <p class="experience-meta">May 2025 – present</p>
+            <ul class="experience-list">
+              <li>Designed and developed VisionPOS: medicine image recognition with deep feature embeddings and OCR, similarity search for metadata retrieval, and combined vision–text verification.</li>
+              <li>Built a smart card recognition system for user verification and registration with Bangla and English OCR, MRZ scanning, and 2D barcode reading.</li>
+              <li>Developed a smart referral web application for patient referrals from Upazila Health Complexes to tertiary hospitals, with voice input via STT and locally deployed models for security.</li>
+              <li>Shipped PharmaOrder for wholesaler–retailer medicine orders with review workflows and local AI.</li>
+              <li>Full-stack voice-driven data extraction (React, FastAPI): Bengali speech-to-English, ASR, LLM structuring (Ollama), validation, and SQLite — scalable to referrals, orders, and other workflows.</li>
+              <li>Automated vehicle tracking for apartments: license plate detection, recognition, and logging.</li>
+            </ul>
+          </article>
+
+          <article class="experience-card" id="exp-bmli">
+            <h3 class="h3 experience-title">Bangladesh Machine Learning Institute, Dhaka — ML Engineer</h3>
+            <p class="experience-meta">May 2024 – April 2025</p>
+            <ul class="experience-list">
+              <li>Automatic quality control for garments: defect detection (broken stitches, open seams, dirt, foreign objects).</li>
+              <li>API to measure garment dimensions from images (waist, hem, rises, inseam on denim).</li>
+              <li>Trainer Agent for LLM fine-tuning with DPO/GRPO datasets; Evaluator Agent for model metrics.</li>
+            </ul>
+          </article>
+
+          <article class="experience-card" id="exp-nbsoft">
+            <h3 class="h3 experience-title">NBSoft, Rangpur — ML Engineer Intern</h3>
+            <p class="experience-meta">March 2023 – November 2023</p>
+            <ul class="experience-list">
+              <li>Real-time crane and container detection from camera footage.</li>
+              <li>Pacemaker detection from chest X-rays.</li>
+              <li>Bone segmentation from pneumonia patient X-rays.</li>
+              <li>Research: local attention grouping for gastritis atrophy and intestinal metaplasia from endoscopy (related open work below).</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
       <section class="work">
         <div class="container">
@@ -153,9 +201,131 @@
 
           <div class="work-boxes">
 
+            <h3 class="work-subsection-heading" id="work-softworks">Softworks — live systems</h3>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">VisionPOS — medicine recognition</h3>
+                <p class="work-text">
+                  Designed and developed a VisionPOS pipeline for medicine image recognition using deep feature embeddings and OCR. Extracted embeddings for indexing and similarity search to retrieve medicine metadata from a database. Integrated OCR for text-based retrieval to verify image embedding output outlining a combined vision system to recognize medicine.
+                </p>
+                <ol class="work-technologies">
+                  <li>Deep embeddings</li>
+                  <li>OCR</li>
+                  <li>Similarity search</li>
+                  <li>Vision + text verification</li>
+                </ol>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/visionpos.png" alt="VisionPOS medicine recognition" />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Smart card recognition</h3>
+                <p class="work-text">
+                  Developed a smart card recognition system to verify existing users and register new users. Implemented front and back card scanning to extract and validate selected information using Bangla and English OCR, MRZ scanning, and 2D barcode reading technologies.
+                </p>
+                <ol class="work-technologies">
+                  <li>Bangla &amp; English OCR</li>
+                  <li>MRZ</li>
+                  <li>2D barcode</li>
+                  <li>Front / back scanning</li>
+                </ol>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/smart-card.png" alt="Smart card recognition" />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Smart referral web application</h3>
+                <p class="work-text">
+                  Developed a smart referral web application to streamline patient referrals from Upazila Health Complexes across Bangladesh to tertiary hospitals nationwide. Implemented voice-based referral input using Speech-to-Text (STT) models to extract meaningful clinical keywords from spoken data and automatically populate government medical referral forms. All AI models were locally deployed to ensure data security and system reliability.
+                </p>
+                <ol class="work-technologies">
+                  <li>STT</li>
+                  <li>Local model deployment</li>
+                  <li>Voice → structured forms</li>
+                </ol>
+                <div class="work-links">
+                  <a href="https://smartreferapp.noeticx.ai/" class="link" target="_blank" rel="noopener" title="Replace with your live deployment URL">Live</a>
+                </div>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/referral-app.png" alt="Smart referral web application" />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">PharmaOrder</h3>
+                <p class="work-text">
+                  Developed PharmaOrder, a web application for managing medicine orders between wholesalers and retailers. Enabled retailers to place urgent medicine requests and allowed wholesalers to review, modify, and approve orders through a streamlined workflow. Ensured secure and efficient system performance with locally deployed AI models.
+                </p>
+                <ol class="work-technologies">
+                  <li>Wholesaler–retailer workflow</li>
+                  <li>Local AI</li>
+                  <li>Web application</li>
+                </ol>
+                <div class="work-links">
+                  <a href="https://pharmaorder.noeticx.ai/" class="link" target="_blank" rel="noopener" title="Replace with your live deployment URL">Live</a>
+                </div>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/pharmaorder.png" alt="PharmaOrder" />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Voice-driven data extraction platform</h3>
+                <p class="work-text">
+                  Developed a full-stack voice-driven data extraction platform using React and FastAPI, supporting Bengali speech-to-English processing. Integrated ASR, LLM-based structuring (Ollama), domain-specific validation, and SQLite storage. Designed a scalable, multi-workflow architecture adaptable for healthcare referrals, order management, and other configurable use cases.
+                </p>
+                <ol class="work-technologies">
+                  <li>React</li>
+                  <li>FastAPI</li>
+                  <li>ASR</li>
+                  <li>Ollama</li>
+                  <li>SQLite</li>
+                </ol>
+                <div class="work-links">
+                  <a href="#" class="link" target="_blank" rel="noopener" title="Replace with your live deployment URL">Live</a>
+                </div>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/voice-extraction.png" alt="Voice-driven data extraction platform" />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Vehicle tracking system</h3>
+                <p class="work-text">
+                  Developed an automated vehicle tracking system for apartments in Dhaka, enabling license plate detection, recognition, and recording of vehicle information.
+                </p>
+                <ol class="work-technologies">
+                  <li>ALPR</li>
+                  <li>Detection &amp; recognition</li>
+                  <li>Logging</li>
+                </ol>
+                <div class="work-links">
+                  <a href="#" class="link" target="_blank" rel="noopener" title="Replace with your live deployment URL">Live</a>
+                </div>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/vehicle-tracking.png" alt="Vehicle tracking for apartments" />
+              </picture>
+            </div>
+
+            <h3 class="work-subsection-heading" id="work-agents">Agents &amp; LLMs</h3>
+
             <!-- ############################ Task Recent #################################### -->
             <div class="work-box">
-              <div class="work-textbox" style="width: 100%;">
+              <div class="work-textbox">
                 <h3 class="h3">Financial AI Accountant Agent</h3>
                 <p class="work-text">
                   Provides an interface to query using Voice Recognition and Retrieve relevant information by 
@@ -206,6 +376,101 @@
               </video>  
             </div>
 
+            <!-- ############################ Task 3 Chatbot (moved under agents) #################################### -->
+             <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Customizable Chatbot</h3>
+                <p class="work-text">
+                  This chatbot represents a chat-gpt like UI which use Ollama models in the 
+                  in the backend to response prompt. However this repo can be Customizable.
+                </p>
+                <ol class="work-technologies">
+                  <li>Llama 3</li>
+                  <li>Ollama</li>
+                  <li>Streamlit</li>
+                  <li>Transformer</li>
+                </ol>
+
+                <div class="work-links">
+                  <a href="https://github.com/rasul-ai/Chatbot-Your-AI-Assistant" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+                </div>
+              </div>
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/chatbot.png"
+                  alt="Customizable chatbot UI"
+                />
+              </picture>
+            </div>
+
+            <!-- ############################ Task 7 Trainer #################################### -->
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Trainer Agent: Finetuning LLM's</h3>
+
+                <p class="work-text">This project automates code execution and fine-tuning tasks 
+                  using Azure OpenAI's GPT-4o model in conjunction with AutoGen's agent framework.
+                </p>
+                <ol class="work-technologies">
+                  <li>AutoGen</li>
+                  <li>GPT-4o</li>
+                  <li>Assistant Agent</li>
+                  <li>CodeExecutor Agent</li>
+                  <li>CodeGen Agent</li>
+                </ol>
+                <div class="work-links">
+                  <a href="https://github.com/rasul-brur/Trainer-Agent-for-Fine-Tuning-LLM-s" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+                </div>
+              </div>
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/Trainer Agent.png"
+                  alt="Trainer Agent for LLM fine-tuning"
+                />
+              </picture>
+            </div>
+
+            <!-- ############################ Task 8 Evaluator #################################### -->
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Evaluator Agent</h3>
+
+                <p class="work-text">This project automates the evaluation of machine learning 
+                  model performance using Azure OpenAI GPT-4o and Autogen AgentChat.
+                </p>
+                <ol class="work-technologies">
+                  <li>AutoGen</li>
+                  <li>GPT-4o</li>
+                  <li>MagneticOneChat</li>
+                  <li>AgentChat</li>
+                  <li>CSV File</li>
+                </ol>
+                <div class="work-links">
+                  <a href="https://github.com/rasul-ai/Evaluator-Agent-Evaluating-model-performance" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+                </div>
+              </div>
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/Evaluator Agent.png"
+                  alt="Evaluator Agent for model metrics"
+                />
+              </picture>
+            </div>
+
+            <h3 class="work-subsection-heading" id="work-vision">Computer vision</h3>
+
             <!-- ############################ Task 2 #################################### -->
             <div class="work-box">
               <div class="work-textbox">
@@ -240,38 +505,6 @@
               </picture>
             </div>
 
-
-             <!-- ############################ Task 3 #################################### -->
-             <div class="work-box">
-              <div class="work-textbox">
-                <h3 class="h3">Customizable Chatbot</h3>
-                <p class="work-text">
-                  This chatbot represents a chat-gpt like UI which use Ollama models in the 
-                  in the backend to response prompt. However this repo can be Customizable.
-                </p>
-                <ol class="work-technologies">
-                  <li>Llama 3</li>
-                  <li>Ollama</li>
-                  <li>Streamlit</li>
-                  <li>Transformer</li>
-                </ol>
-
-                <div class="work-links">
-                  <a href="https://github.com/rasul-ai/Chatbot-Your-AI-Assistant" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
-                </div>
-              </div>
-
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/chatbot.png"
-                  alt="agency elevation"
-                />
-              </picture>
-            </div>
-
             <!-- ############################ Task 4 #################################### -->
             <div class="work-box">
               <div class="work-textbox">
@@ -300,7 +533,62 @@
               </video>         
             </div>
 
-            <!-- ############################ Task 5 #################################### -->
+            <!-- ############################ Task 9 Mouse #################################### -->
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Mouse Control using Hand Gesture</h3>
+                <p class="work-text">
+                  This experiment introduces mouse pointer movement on GUI and function clicking 
+                  using finger movement. Decreasing distance between the thumb and index finger 
+                  mouse clicking can be performed.
+                </p>
+                <ol class="work-technologies">
+                  <li>MediaPipe</li>
+                  <li>OpenCV</li>
+                  <li>PyAutoGUI</li>
+                  <li>Keypoints Detection</li>
+                </ol>
+              </div>
+
+              <video class="work-video"  controls autoplay loop muted width="600" height="300">
+                <source src="assets/video/handpose.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>         
+            </div>
+            <!-- ############################ Task 8 Koala #################################### -->
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Koala Detection</h3>
+                <p class="work-text">
+                  Created an AI model able to detect koala from wild life image or video.
+                </p>
+                <ol class="work-technologies">
+                  <li>Python</li>
+                  <li>YOLOv8</li>
+                  <li>Docker</li>
+                  <li>Flask</li>
+                  <li>Pytorch</li>
+                </ol>
+
+                <div class="work-links">
+                  <a href="https://github.com/rasul-ai/Koala_detection" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+                </div>
+              </div>
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/koala.jpg"
+                  alt="Koala detection"
+                />
+              </picture>
+            </div>
+
+            <h3 class="work-subsection-heading" id="work-medical">Medical imaging</h3>
+
+            <!-- ############################ Task 5 GA/IM #################################### -->
             <div class="work-box">
               <div class="work-textbox">
                 <h3 class="h3">Gastritis Atropy & Intestinal Metaplasia Analysis</h3>
@@ -327,12 +615,12 @@
                 <img
                   loading="lazy"
                   src="assets/images/work/GA_IM.jpg"
-                  alt="agency elevation"
+                  alt="Endoscopy GA and IM analysis"
                 />
               </picture>
             </div>
 
-            <!-- ############################ Task 6 #################################### -->
+            <!-- ############################ Task 6 Bone #################################### -->
             <div class="work-box">
               <div class="work-textbox">
                 <h3 class="h3">Bone Segmentation</h3>
@@ -357,152 +645,207 @@
                 <img
                   loading="lazy"
                   src="assets/images/work/unet.jpg"
-                  alt="portfolio template"
+                  alt="Bone segmentation from chest X-ray"
                 />
+              </picture>
             </div>
 
+            <h3 class="work-subsection-heading" id="work-research">Research &amp; NLP</h3>
 
-            <!-- ############################ Task 7 #################################### -->
             <div class="work-box">
               <div class="work-textbox">
-                <h3 class="h3">Trainer Agent: Finetuning LLM's</h3>
-
-                <p class="work-text">This project automates code execution and fine-tuning tasks 
-                  using Azure OpenAI's GPT-4o model in conjunction with AutoGen's agent framework.
-                </p>
-                <ol class="work-technologies">
-                  <li>AutoGen</li>
-                  <li>GPT-4o</li>
-                  <li>Assistant Agent</li>
-                  <li>CodeExecutor Agent</li>
-                  <li>CodeGen Agent</li>
-                </ol>
-                <div class="work-links">
-                  <a href="https://github.com/rasul-brur/Trainer-Agent-for-Fine-Tuning-LLM-s" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
-                </div>
-              </div>
-
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/Trainer Agent.png"
-                  alt="portfolio template"
-                />
-            </div>
-
-            <!-- ############################ Task 8 #################################### -->
-            <div class="work-box">
-              <div class="work-textbox">
-                <h3 class="h3">Evaluator Agent</h3>
-
-                <p class="work-text">This project automates the evaluation of machine learning 
-                  model performance using Azure OpenAI GPT-4o and Autogen AgentChat.
-                </p>
-                <ol class="work-technologies">
-                  <li>AutoGen</li>
-                  <li>GPT-4o</li>
-                  <li>MagneticOneChat</li>
-                  <li>AgentChat</li>
-                  <li>CSV File</li>
-                </ol>
-                <div class="work-links">
-                  <a href="https://github.com/rasul-ai/Evaluator-Agent-Evaluating-model-performance" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
-                </div>
-              </div>
-
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/Evaluator Agent.png"
-                  alt="portfolio template"
-                />
-            </div>
-
-
-            <!-- ############################ Task 9 #################################### -->
-            <div class="work-box">
-              <div class="work-textbox">
-                <h3 class="h3">Mouse Control using Hand Gesture</h3>
+                <h3 class="h3">Text Summarization (CNN / Daily Mail)</h3>
                 <p class="work-text">
-                  This experiment introduces mouse pointer movement on GUI and function clicking 
-                  using finger movement. Decreasing distance between the thumb and index finger 
-                  mouse clicking can be performed.
+                  Sequence-to-sequence summarization on the CNN / Daily Mail news dataset with attention-based models to produce concise headlines from article text.
+                </p>
+                <ol class="work-technologies">
+                  <li>Python</li>
+                  <li>TensorFlow / Keras</li>
+                  <li>Attention</li>
+                  <li>NLP</li>
+                </ol>
+                <div class="work-links">
+                  <a href="https://github.com/rasul-ai" target="_blank" rel="noopener" class="link">Explore on GitHub</a>
+                </div>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/chatbot.png" alt="Text summarization project" />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Sentiment Analysis (Coursera experiments)</h3>
+                <p class="work-text">
+                  Experiments in sentiment classification on text data, following structured coursework labs and extending with custom evaluation.
+                </p>
+                <ol class="work-technologies">
+                  <li>Python</li>
+                  <li>Scikit-learn</li>
+                  <li>NLP</li>
+                </ol>
+                <div class="work-links">
+                  <a href="https://github.com/rasul-ai" target="_blank" rel="noopener" class="link">Explore on GitHub</a>
+                </div>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/person_identification.png" alt="Sentiment analysis" />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Real-time 2D / 3D Pose &amp; Mesh (Webcam)</h3>
+                <p class="work-text">
+                  Human pose and dense mesh estimation from live webcam video for interaction and analysis prototypes.
                 </p>
                 <ol class="work-technologies">
                   <li>MediaPipe</li>
                   <li>OpenCV</li>
-                  <li>PyAutoGUI</li>
-                  <li>Keypoints Detection</li>
-                </ol>
-              </div>
-
-              <video class="work-video"  controls autoplay loop muted width="600" height="300">
-                <source src="assets/video/handpose.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>         
-            </div>
-            <!-- ############################ Task 8 #################################### -->
-            <div class="work-box">
-              <div class="work-textbox">
-                <h3 class="h3">Koala Detection</h3>
-                <p class="work-text">
-                  Created an AI model able to detect koala from wild life image or video.
-                </p>
-                <ol class="work-technologies">
                   <li>Python</li>
-                  <li>YOLOv8</li>
-                  <li>Docker</li>
-                  <li>Flask</li>
-                  <li>Pytorch</li>
                 </ol>
-
                 <div class="work-links">
-                  <a href="https://github.com/rasul-ai/Koala_detection" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
+                  <a href="https://github.com/rasul-ai" target="_blank" rel="noopener" class="link">Explore on GitHub</a>
                 </div>
               </div>
+              <video class="work-video" controls autoplay loop muted width="600" height="300">
+                <source src="assets/video/handpose.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Bolt &amp; Nut Recognition</h3>
+                <p class="work-text">
+                  Detection and center measurement of bolts and nuts in industrial imagery for assembly QA workflows.
+                </p>
+                <ol class="work-technologies">
+                  <li>Computer vision</li>
+                  <li>Object detection</li>
+                  <li>Python</li>
+                </ol>
+                <div class="work-links">
+                  <a href="https://github.com/rasul-ai" target="_blank" rel="noopener" class="link">Explore on GitHub</a>
+                </div>
+              </div>
               <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/koala.jpg"
-                  alt="agency elevation"
-                />
+                <img loading="lazy" src="assets/images/work/income tax.png" alt="Bolt and nut recognition" />
               </picture>
             </div>
-            <!-- ############################ Task 1 #################################### -->
-            <!-- ############################ Task 1 #################################### -->
-            <!-- ############################ Task 1 #################################### -->
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Autistic Children Classification</h3>
+                <p class="work-text">
+                  Image-based classification pipeline to support screening-style workflows from structured datasets.
+                </p>
+                <ol class="work-technologies">
+                  <li>Deep learning</li>
+                  <li>PyTorch</li>
+                  <li>Transfer learning</li>
+                </ol>
+                <div class="work-links">
+                  <a href="https://github.com/rasul-ai" target="_blank" rel="noopener" class="link">Explore on GitHub</a>
+                </div>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/GA_IM.jpg" alt="Autistic children classification" />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <h3 class="h3">Fake Chest X-ray Generation</h3>
+                <p class="work-text">
+                  Synthetic chest X-ray generation using VAE and Stable Diffusion–style pipelines for data augmentation and research.
+                </p>
+                <ol class="work-technologies">
+                  <li>VAE</li>
+                  <li>Stable Diffusion</li>
+                  <li>PyTorch</li>
+                </ol>
+                <div class="work-links">
+                  <a href="https://github.com/rasul-ai" target="_blank" rel="noopener" class="link">Explore on GitHub</a>
+                </div>
+              </div>
+              <picture class="work-img">
+                <img loading="lazy" src="assets/images/work/unet.jpg" alt="Chest X-ray generation" />
+              </picture>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="skills">
+      <section class="skills" id="skills" aria-labelledby="skills-heading">
         <div class="container">
-          <h2 class="h2" id="skills">My Toolkit</h2>
+          <h2 class="h2" id="skills-heading">Professional skills</h2>
+          <div class="skills-detail">
+            <div class="skills-column">
+              <h3 class="h4 skills-column-title">Languages &amp; web</h3>
+              <p class="skills-column-text">C, C++, Java, Python, HTML5, CSS3, JavaScript, Bash.</p>
+            </div>
+            <div class="skills-column">
+              <h3 class="h4 skills-column-title">Frontend &amp; APIs</h3>
+              <p class="skills-column-text">React, Vite, Next.js, Material-UI, Flask, FastAPI, Streamlit, Tkinter.</p>
+            </div>
+            <div class="skills-column">
+              <h3 class="h4 skills-column-title">ML &amp; AI</h3>
+              <p class="skills-column-text">PyTorch, TensorFlow, Keras, OpenCV, PaddlePaddle, Scikit-learn, Hugging Face Transformers, LLMs, LangChain, RAG, OCR, STT/ASR, RL, computer vision, NLP.</p>
+            </div>
+            <div class="skills-column">
+              <h3 class="h4 skills-column-title">Cloud, data &amp; DevOps</h3>
+              <p class="skills-column-text">Google Cloud, Azure, MySQL, PostgreSQL, SQLite, Docker, Git, GitHub Actions, S3; embedded: Raspberry Pi, Arduino.</p>
+            </div>
+          </div>
+
+          <h2 class="h2 toolkit-heading" id="toolkit">My toolkit</h2>
           <div class="skills-imgs">
-                <img src="assets/images/skills/Python.png" alt="Python" class="skills-img" loading="lazy" title="Python">
-                <img src="assets/images/skills/pytorch.webp" alt="pytorch" class="skills-img" loading="lazy" title="pytorch">
-                 <img src="assets/images/skills/TensorFlow.png" alt="TensorFlow" class="skills-img" loading="lazy" title="TensorFlow">
-                 <img src="assets/images/skills/opencv.webp" alt="opencv" class="skills-img" loading="lazy" title="opencv">
-                 <img src="assets/images/skills/pillow.avif" alt="pillow" class="skills-img" loading="lazy" title="pillow">
-                 <img src="assets/images/skills/numpy.png" alt="numpy" class="skills-img" loading="lazy" title="numpy">
-                 <img src="assets/images/skills/pandas.jpg" alt="pandas" class="skills-img" loading="lazy" title="pandas">
-                 <img src="assets/images/skills/matplotlib.jpeg" alt="matplotlib" class="skills-img" loading="lazy" title="matplotlib">               
-                 <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
-                 <img src="assets/images/skills/html.png" alt="html" class="skills-img" loading="lazy" title="html">
-                 <img src="assets/images/skills/css.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
-                 <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
-            </figure>
+            <img src="assets/images/skills/Python.png" alt="Python" class="skills-img" loading="lazy" title="Python">
+            <img src="assets/images/skills/pytorch.webp" alt="PyTorch" class="skills-img" loading="lazy" title="PyTorch">
+            <img src="assets/images/skills/TensorFlow.png" alt="TensorFlow" class="skills-img" loading="lazy" title="TensorFlow">
+            <img src="assets/images/skills/opencv.webp" alt="OpenCV" class="skills-img" loading="lazy" title="OpenCV">
+            <img src="assets/images/skills/pillow.avif" alt="Pillow" class="skills-img" loading="lazy" title="Pillow">
+            <img src="assets/images/skills/numpy.png" alt="NumPy" class="skills-img" loading="lazy" title="NumPy">
+            <img src="assets/images/skills/pandas.jpg" alt="pandas" class="skills-img" loading="lazy" title="pandas">
+            <img src="assets/images/skills/matplotlib.jpeg" alt="Matplotlib" class="skills-img" loading="lazy" title="Matplotlib">
+            <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+            <img src="assets/images/skills/html.png" alt="HTML" class="skills-img" loading="lazy" title="HTML">
+            <img src="assets/images/skills/css.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
+            <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg" alt="Docker" class="skills-img skills-img-tool" loading="lazy" title="Docker">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/react.svg" alt="React" class="skills-img skills-img-tool" loading="lazy" title="React">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/fastapi.svg" alt="FastAPI" class="skills-img skills-img-tool" loading="lazy" title="FastAPI">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/huggingface.svg" alt="Hugging Face" class="skills-img skills-img-tool" loading="lazy" title="Hugging Face">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/postgresql.svg" alt="PostgreSQL" class="skills-img skills-img-tool" loading="lazy" title="PostgreSQL">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mysql.svg" alt="MySQL" class="skills-img skills-img-tool" loading="lazy" title="MySQL">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/sqlite.svg" alt="SQLite" class="skills-img skills-img-tool" loading="lazy" title="SQLite">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlecloud.svg" alt="Google Cloud" class="skills-img skills-img-tool" loading="lazy" title="Google Cloud">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftazure.svg" alt="Microsoft Azure" class="skills-img skills-img-tool" loading="lazy" title="Microsoft Azure">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/jupyter.svg" alt="Jupyter" class="skills-img skills-img-tool" loading="lazy" title="Jupyter">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/scikitlearn.svg" alt="scikit-learn" class="skills-img skills-img-tool" loading="lazy" title="scikit-learn">
           </div>
         </div>
       </section>
 
+      <section class="education" id="education" aria-labelledby="education-heading">
+        <div class="container">
+          <h2 class="h2" id="education-heading">Education</h2>
+          <article class="education-card">
+            <h3 class="h3">B.Sc. in Computer Science &amp; Engineering</h3>
+            <p class="education-meta">Begum Rokeya University, Rangpur · Graduation 2023</p>
+            <p class="education-text">CGPA 3.39 · Rank: 7th in class.</p>
+          </article>
+
+          <article class="publication-card" id="publication">
+            <h3 class="h3">Publication</h3>
+            <p class="publication-text">
+              Hasan, K.; Tuhin, K.A.; Bapary, M.R.I.; et al. <cite>MMF-Gait: A Multi-Model Fusion-Enhanced Gait Recognition Framework Integrating Convolutional and Attention Networks.</cite> Symmetry 2025, 17, 1155.
+            </p>
+            <a href="https://doi.org/10.3390/sym17071155" class="link" target="_blank" rel="noopener">https://doi.org/10.3390/sym17071155</a>
+          </article>
+        </div>
+      </section>
 
       <section class="contact">
         <div class="container">
