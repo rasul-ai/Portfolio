@@ -1495,6 +1495,8 @@ a.project-media:hover .badge {
   font-weight: 550;
   line-height: 1.4;
   text-decoration: none;
+  /* Balanced lines keep the arrow from wrapping onto a line by itself. */
+  text-wrap: balance;
 }
 
 a.index-name:hover {
