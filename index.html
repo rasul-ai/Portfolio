@@ -331,14 +331,14 @@
                       id="caremate"
                       data-dialog="caremate"
                       data-kind="embed"
-                      data-src="https://drive.google.com/file/d/1-U4ckMPJbTv1zr1bE9mdRrh8KkQ3qk8f/preview"
+                      data-src="https://drive.google.com/file/d/1TcXVltxHM9Ymia6WmxU0kUULihdzttj6/preview"
                       data-aspect="16 / 10"
                       data-context="Softworks · Speech &amp; Conversational AI"
                       data-outline="Voice in|Whisper + Emotion2Vec|Gemma4|Qwen3-TTS voice out"
                       data-note="Local and API-based pipelines · routine and medication reminders"
-                      data-drive="https://drive.google.com/file/d/1-U4ckMPJbTv1zr1bE9mdRrh8KkQ3qk8f/view"
+                      data-drive="https://drive.google.com/file/d/1TcXVltxHM9Ymia6WmxU0kUULihdzttj6/view"
                     >
-                      <a class="project-media" href="https://drive.google.com/file/d/1-U4ckMPJbTv1zr1bE9mdRrh8KkQ3qk8f/view" data-open tabindex="-1" aria-hidden="true">
+                      <a class="project-media" href="https://drive.google.com/file/d/1TcXVltxHM9Ymia6WmxU0kUULihdzttj6/view" data-open tabindex="-1" aria-hidden="true">
                         <img src="assets/images/posters/caremate.webp" width="960" height="600" loading="lazy" decoding="async" alt="" />
                         <video class="preview" data-src="assets/video/previews/caremate.mp4" muted loop playsinline preload="none"></video>
                         <span class="badge"><svg class="icon" aria-hidden="true"><use href="#i-play" /></svg>Demo · 21:02</span>
@@ -351,7 +351,7 @@
                           engagement.
                         </p>
                         <p class="project-links">
-                          <a class="text-btn" href="https://drive.google.com/file/d/1-U4ckMPJbTv1zr1bE9mdRrh8KkQ3qk8f/view" data-open>
+                          <a class="text-btn" href="https://drive.google.com/file/d/1TcXVltxHM9Ymia6WmxU0kUULihdzttj6/view" data-open>
                             <svg class="icon" aria-hidden="true"><use href="#i-play" /></svg>Watch demo
                           </a>
                         </p>
@@ -567,14 +567,99 @@
               <div class="role-body">
                 <div class="project-grid">
                   <article class="project" id="garment-qc">
-                    <div class="project-media outline-panel twill">
-                      <p class="panel-label">Defect classes</p>
-                      <ul class="detections">
-                        <li><span>broken stitch</span></li>
-                        <li><span>open seam</span></li>
-                        <li><span>dirt mark</span></li>
-                        <li><span>foreign object</span></li>
-                      </ul>
+                    <div class="project-media qc-panel">
+                      <p class="panel-label">Defect detection</p>
+                      <svg class="qc-shirt" viewBox="0 0 400 250" role="img" aria-labelledby="qc-svg-title">
+                        <title id="qc-svg-title">A light-blue button-up shirt with detected defects: a dirt mark on the front, a broken stitch on the sleeve hem and an open armhole seam</title>
+                        <defs>
+                          <path id="qc-outline" d="M178 30L128 44Q101 58 78 92L108 112L134 97Q137 160 136 232Q150 244 200 240Q250 244 264 232Q263 160 266 97L292 112L322 92Q299 58 272 44L222 30Q200 40 178 30Z" />
+                          <clipPath id="qc-clip"><use href="#qc-outline" /></clipPath>
+                          <linearGradient id="qc-shade" x1="0" x2="1" y1="0" y2="0">
+                            <stop offset="0" stop-color="#9fb4cb" />
+                            <stop offset="0.3" stop-color="#c3d3e5" />
+                            <stop offset="0.52" stop-color="#d3e0ee" />
+                            <stop offset="0.75" stop-color="#c0d0e2" />
+                            <stop offset="1" stop-color="#97adc5" />
+                          </linearGradient>
+                          <pattern id="qc-weave" width="3" height="3" patternUnits="userSpaceOnUse">
+                            <path d="M0 0.5H3M0.5 0V3" stroke="#5f7894" stroke-width="0.3" opacity="0.14" />
+                          </pattern>
+                          <radialGradient id="qc-dirt" cx="0.45" cy="0.5" r="0.55">
+                            <stop offset="0" stop-color="#6b4a2b" stop-opacity="0.85" />
+                            <stop offset="0.55" stop-color="#7d5a36" stop-opacity="0.55" />
+                            <stop offset="1" stop-color="#8a6a45" stop-opacity="0" />
+                          </radialGradient>
+                          <filter id="qc-rough" x="-30%" y="-30%" width="160%" height="160%">
+                            <feTurbulence type="fractalNoise" baseFrequency="0.22" numOctaves="3" seed="7" />
+                            <feDisplacementMap in="SourceGraphic" scale="9" />
+                            <feGaussianBlur stdDeviation="0.6" />
+                          </filter>
+                          <filter id="qc-drop" x="-10%" y="-10%" width="120%" height="125%">
+                            <feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#000" flood-opacity="0.22" />
+                          </filter>
+                        </defs>
+
+                        <!-- Shirt, laid flat -->
+                        <g filter="url(#qc-drop)"><use href="#qc-outline" fill="url(#qc-shade)" /></g>
+                        <g clip-path="url(#qc-clip)">
+                          <rect x="70" y="25" width="260" height="225" fill="url(#qc-weave)" />
+                          <!-- folds -->
+                          <path d="M150 120Q156 170 150 228M250 118Q244 170 252 228M118 70Q124 84 128 98M282 70Q276 84 272 98" fill="none" stroke="#7f97b2" stroke-width="2.2" opacity="0.28" />
+                          <path d="M158 122Q163 170 158 226M244 120Q238 170 245 226" fill="none" stroke="#eef4fa" stroke-width="2" opacity="0.45" />
+                          <!-- defect: dirt mark -->
+                          <g filter="url(#qc-rough)">
+                            <ellipse cx="238" cy="176" rx="14" ry="10" fill="url(#qc-dirt)" transform="rotate(-18 238 176)" />
+                            <ellipse cx="249" cy="186" rx="5" ry="3.5" fill="url(#qc-dirt)" />
+                            <circle cx="228" cy="186" r="2.4" fill="#6b4a2b" opacity="0.5" />
+                          </g>
+                          <!-- defect: open seam (split in the left armhole seam) -->
+                          <path d="M133.6 60Q127.5 74 135.6 88Q141.5 72 133.6 60Z" fill="#5d7189" />
+                          <path d="M133.6 62Q130.5 74 135.4 86Q138.6 72 133.6 62Z" fill="#2c3846" />
+                          <path d="M130.6 68.5L137.4 69.5M130.4 74.5L138.4 74M131.2 80.5L137.8 81.5" stroke="#dfe8f2" stroke-width="0.55" />
+                        </g>
+                        <use href="#qc-outline" fill="none" stroke="#7c93ad" stroke-width="1" />
+
+                        <!-- seams and topstitching -->
+                        <g fill="none" stroke="#6f87a2" stroke-width="0.9">
+                          <path d="M128 44Q131.5 52 133.6 60M135.6 88Q135 93 134 97M272 44Q262 70 266 97" />
+                          <path d="M134 97Q137 160 136 232M266 97Q263 160 264 232" />
+                        </g>
+                        <g fill="none" stroke="#4f6782" stroke-width="0.7" stroke-dasharray="2 1.6">
+                          <path d="M131 45Q134.5 51 136.8 58M138.8 89Q138.3 93 137.5 97M269 45Q259 70 262.5 97" />
+                          <path d="M82 90L109.5 108.5L132 95.5" />
+                          <path d="M318 90L308 96.6M297.6 103.6L290.5 108.5L268 95.5" />
+                          <path d="M140 232Q152 241 200 237Q248 241 260 232" />
+                        </g>
+                        <!-- defect: broken stitch, loose thread ends -->
+                        <path d="M308 96.6Q305.5 102 310 104.5Q313.5 107.5 309.5 111.5M297.6 103.6Q295.5 98 300 94.5Q302.5 92.5 301 89.5" fill="none" stroke="#2f4560" stroke-width="0.9" stroke-linecap="round" />
+
+                        <!-- placket, buttons, collar, pocket -->
+                        <path d="M194 46V239.5M206 46V239.5" fill="none" stroke="#7c93ad" stroke-width="0.9" />
+                        <g fill="#f4f6f8" stroke="#8ea2b8" stroke-width="0.6">
+                          <circle cx="200" cy="72" r="2.6" /><circle cx="200" cy="102" r="2.6" /><circle cx="200" cy="132" r="2.6" />
+                          <circle cx="200" cy="162" r="2.6" /><circle cx="200" cy="192" r="2.6" /><circle cx="200" cy="222" r="2.6" />
+                        </g>
+                        <path d="M178 30Q200 40 222 30L226 36Q200 47 174 36Z" fill="#b9cadd" stroke="#7c93ad" stroke-width="0.8" />
+                        <path d="M174 36L200 46L184 64Q174 50 174 36Z" fill="#cad8e8" stroke="#7c93ad" stroke-width="0.9" />
+                        <path d="M226 36L200 46L216 64Q226 50 226 36Z" fill="#c2d1e3" stroke="#7c93ad" stroke-width="0.9" />
+                        <path d="M220 78H252V106L236 112L220 106Z" fill="#c9d7e7" stroke="#7c93ad" stroke-width="0.8" />
+                        <path d="M222.5 81H249.5" fill="none" stroke="#4f6782" stroke-width="0.6" stroke-dasharray="2 1.6" />
+
+                        <!-- detections -->
+                        <g class="qc-box">
+                          <rect x="218" y="158" width="44" height="36" />
+                          <rect x="124" y="56" width="22" height="36" />
+                          <rect x="291" y="86" width="26" height="29" />
+                        </g>
+                        <g class="qc-tag">
+                          <rect x="218" y="147.5" width="67" height="11" />
+                          <text x="221.5" y="155.6">dirt mark 0.94</text>
+                          <rect x="79" y="45.5" width="67" height="11" />
+                          <text x="82.5" y="53.6">open seam 0.91</text>
+                          <rect x="291" y="75.5" width="81" height="11" />
+                          <text x="294.5" y="83.6">broken stitch 0.88</text>
+                        </g>
+                      </svg>
                     </div>
                     <div class="project-body">
                       <h4 class="project-title">Automated Garment Quality Control</h4>
