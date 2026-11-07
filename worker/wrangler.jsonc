@@ -1,0 +1,25 @@
+// Cloudflare Worker that relays portfolio visit alerts and contact-form messages to Telegram.
+// Deploy steps are in the header comment of src/index.js.
+{
+  "name": "portfolio-notify",
+  "main": "src/index.js",
+  "compatibility_date": "2025-10-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": true },
+  "vars": {
+    // Comma-separated list of page origins allowed to send alerts.
+    "ALLOWED_ORIGINS": "https://rasul-ai.github.io",
+    // Time zone used for "first seen" dates in the alerts.
+    "OWNER_TZ": "Asia/Dhaka"
+  },
+  // Per-IP limits per Cloudflare location (the period must be 10 or 60 seconds).
+  "ratelimits": [
+    { "name": "LIMIT_VISIT", "namespace_id": "1001", "simple": { "limit": 4, "period": 60 } },
+    { "name": "LIMIT_EVENT", "namespace_id": "1002", "simple": { "limit": 15, "period": 60 } },
+    { "name": "LIMIT_CONTACT", "namespace_id": "1003", "simple": { "limit": 2, "period": 60 } }
+  ]
+  // Secrets (never committed), set with `npx wrangler@4 secret put <NAME>`:
+  //   TELEGRAM_BOT_TOKEN  token from @BotFather
+  //   TELEGRAM_CHAT_ID    chat that receives the alerts
+}
